@@ -1,0 +1,26 @@
+# Publishes to the VS Code Marketplace with Trusted Publishing (OIDC): no personal access token.
+# Runs when a version tag like v1.0.0 is pushed, or by hand from the Actions tab.
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test
+        run: node --test test/
+      - name: Package
+        run: npx --yes @vscode/vsce@4.1.0 package --out extension.vsix
+      - name: Publish
+        run: npx --yes @vscode/vsce@4.1.0 publish --oidc --packagePath extension.vsix

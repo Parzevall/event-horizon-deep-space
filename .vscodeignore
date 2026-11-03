@@ -12,3 +12,4 @@ images/screenshots/**
 .gitignore
 *.vsix
 node_modules/**
+.github/**
