@@ -1,0 +1,604 @@
+{
+  "fonts": [
+    {
+      "id": "eh-nerd",
+      "src": [
+        {
+          "path": "../fonts/eh-nerd.woff",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal",
+      "size": "112%"
+    }
+  ],
+  "iconDefinitions": {
+    "file-file": {
+      "fontCharacter": "\\f15b",
+      "fontColor": "#8F8A84"
+    },
+    "file-ts": {
+      "fontCharacter": "\\e628",
+      "fontColor": "#E8A06A"
+    },
+    "file-tsx": {
+      "fontCharacter": "\\e7ba",
+      "fontColor": "#7FE3F0"
+    },
+    "file-dts": {
+      "fontCharacter": "\\e628",
+      "fontColor": "#E8A06A"
+    },
+    "file-js": {
+      "fontCharacter": "\\e74e",
+      "fontColor": "#FFC799"
+    },
+    "file-jsx": {
+      "fontCharacter": "\\e7ba",
+      "fontColor": "#7FE3F0"
+    },
+    "file-py": {
+      "fontCharacter": "\\e73c",
+      "fontColor": "#9BD67B"
+    },
+    "file-pyproject": {
+      "fontCharacter": "\\e73c",
+      "fontColor": "#9BD67B"
+    },
+    "file-ipynb": {
+      "fontCharacter": "\\e678",
+      "fontColor": "#D9C8A0"
+    },
+    "file-json": {
+      "fontCharacter": "\\e60b",
+      "fontColor": "#FF7B54"
+    },
+    "file-npm": {
+      "fontCharacter": "\\e71e",
+      "fontColor": "#FF5F56"
+    },
+    "file-tsconfig": {
+      "fontCharacter": "\\e628",
+      "fontColor": "#7FD1C7"
+    },
+    "file-lock": {
+      "fontCharacter": "\\f023",
+      "fontColor": "#5E5A55"
+    },
+    "file-md": {
+      "fontCharacter": "\\e73e",
+      "fontColor": "#8F8A84"
+    },
+    "file-readme": {
+      "fontCharacter": "\\f05a",
+      "fontColor": "#FF8A3D"
+    },
+    "file-txt": {
+      "fontCharacter": "\\f15c",
+      "fontColor": "#8F8A84"
+    },
+    "file-log": {
+      "fontCharacter": "\\f18d",
+      "fontColor": "#5E5A55"
+    },
+    "file-license": {
+      "fontCharacter": "\\e60a",
+      "fontColor": "#FFC799"
+    },
+    "file-toml": {
+      "fontCharacter": "\\e615",
+      "fontColor": "#7FD1C7"
+    },
+    "file-yaml": {
+      "fontCharacter": "\\e6a8",
+      "fontColor": "#D7A6FF"
+    },
+    "file-env": {
+      "fontCharacter": "\\f462",
+      "fontColor": "#FFC799"
+    },
+    "file-ini": {
+      "fontCharacter": "\\e615",
+      "fontColor": "#8F8A84"
+    },
+    "file-git": {
+      "fontCharacter": "\\e702",
+      "fontColor": "#FF8A3D"
+    },
+    "file-csv": {
+      "fontCharacter": "\\e64a",
+      "fontColor": "#9BD67B"
+    },
+    "file-parquet": {
+      "fontCharacter": "\\f1c0",
+      "fontColor": "#FF7B54"
+    },
+    "file-sql": {
+      "fontCharacter": "\\f1c0",
+      "fontColor": "#9DB4FF"
+    },
+    "file-db": {
+      "fontCharacter": "\\f1c0",
+      "fontColor": "#9DB4FF"
+    },
+    "file-c": {
+      "fontCharacter": "\\e61e",
+      "fontColor": "#9DB4FF"
+    },
+    "file-cpp": {
+      "fontCharacter": "\\e61d",
+      "fontColor": "#9DB4FF"
+    },
+    "file-h": {
+      "fontCharacter": "\\f0fd",
+      "fontColor": "#D7A6FF"
+    },
+    "file-cmake": {
+      "fontCharacter": "\\e615",
+      "fontColor": "#7FD1C7"
+    },
+    "file-make": {
+      "fontCharacter": "\\e779",
+      "fontColor": "#7FD1C7"
+    },
+    "file-rs": {
+      "fontCharacter": "\\e7a8",
+      "fontColor": "#FF8A3D"
+    },
+    "file-go": {
+      "fontCharacter": "\\e626",
+      "fontColor": "#7FE3F0"
+    },
+    "file-java": {
+      "fontCharacter": "\\e738",
+      "fontColor": "#7FD1C7"
+    },
+    "file-lua": {
+      "fontCharacter": "\\e620",
+      "fontColor": "#9DB4FF"
+    },
+    "file-sh": {
+      "fontCharacter": "\\f489",
+      "fontColor": "#9BD67B"
+    },
+    "file-r": {
+      "fontCharacter": "\\f25d",
+      "fontColor": "#9DB4FF"
+    },
+    "file-html": {
+      "fontCharacter": "\\e736",
+      "fontColor": "#FF5F56"
+    },
+    "file-css": {
+      "fontCharacter": "\\e749",
+      "fontColor": "#9DB4FF"
+    },
+    "file-scss": {
+      "fontCharacter": "\\e603",
+      "fontColor": "#D7A6FF"
+    },
+    "file-svg": {
+      "fontCharacter": "\\e698",
+      "fontColor": "#FFC799"
+    },
+    "file-xml": {
+      "fontCharacter": "\\e619",
+      "fontColor": "#7FD1C7"
+    },
+    "file-image": {
+      "fontCharacter": "\\f1c5",
+      "fontColor": "#D7A6FF"
+    },
+    "file-pdf": {
+      "fontCharacter": "\\f1c1",
+      "fontColor": "#FF5F56"
+    },
+    "file-font": {
+      "fontCharacter": "\\e659",
+      "fontColor": "#8F8A84"
+    },
+    "file-archive": {
+      "fontCharacter": "\\f1c6",
+      "fontColor": "#5E5A55"
+    },
+    "file-docker": {
+      "fontCharacter": "\\f308",
+      "fontColor": "#9DB4FF"
+    },
+    "file-tex": {
+      "fontCharacter": "\\e69b",
+      "fontColor": "#8F8A84"
+    },
+    "file-vsix": {
+      "fontCharacter": "\\e70c",
+      "fontColor": "#FF8A3D"
+    },
+    "folder-folder": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#8F8A84"
+    },
+    "folder-folder-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#8F8A84"
+    },
+    "folder-src": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#FF8A3D"
+    },
+    "folder-src-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#FF8A3D"
+    },
+    "folder-tests": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#9BD67B"
+    },
+    "folder-tests-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#9BD67B"
+    },
+    "folder-data": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#FFC799"
+    },
+    "folder-data-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#FFC799"
+    },
+    "folder-notebooks": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#D9C8A0"
+    },
+    "folder-notebooks-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#D9C8A0"
+    },
+    "folder-docs": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#9DB4FF"
+    },
+    "folder-docs-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#9DB4FF"
+    },
+    "folder-scripts": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#7FD1C7"
+    },
+    "folder-scripts-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#7FD1C7"
+    },
+    "folder-assets": {
+      "fontCharacter": "\\f07b",
+      "fontColor": "#D7A6FF"
+    },
+    "folder-assets-open": {
+      "fontCharacter": "\\f07c",
+      "fontColor": "#D7A6FF"
+    },
+    "folder-git": {
+      "fontCharacter": "\\e5fb",
+      "fontColor": "#FF5F56"
+    },
+    "folder-git-open": {
+      "fontCharacter": "\\e5fb",
+      "fontColor": "#FF5F56"
+    },
+    "folder-config": {
+      "fontCharacter": "\\e5fc",
+      "fontColor": "#FFB547"
+    },
+    "folder-config-open": {
+      "fontCharacter": "\\e5fc",
+      "fontColor": "#FFB547"
+    },
+    "folder-deps": {
+      "fontCharacter": "\\e5fa",
+      "fontColor": "#5E5A55"
+    },
+    "folder-deps-open": {
+      "fontCharacter": "\\e5fa",
+      "fontColor": "#5E5A55"
+    }
+  },
+  "file": "file-file",
+  "folder": "folder-folder",
+  "folderExpanded": "folder-folder-open",
+  "rootFolder": "folder-folder",
+  "rootFolderExpanded": "folder-folder-open",
+  "fileExtensions": {
+    "ts": "file-ts",
+    "mts": "file-ts",
+    "cts": "file-ts",
+    "tsx": "file-tsx",
+    "d.ts": "file-dts",
+    "js": "file-js",
+    "mjs": "file-js",
+    "cjs": "file-js",
+    "jsx": "file-jsx",
+    "py": "file-py",
+    "pyi": "file-py",
+    "pyw": "file-py",
+    "ipynb": "file-ipynb",
+    "json": "file-json",
+    "jsonc": "file-json",
+    "json5": "file-json",
+    "lock": "file-lock",
+    "md": "file-md",
+    "mdx": "file-md",
+    "markdown": "file-md",
+    "txt": "file-txt",
+    "log": "file-log",
+    "toml": "file-toml",
+    "yaml": "file-yaml",
+    "yml": "file-yaml",
+    "env": "file-env",
+    "ini": "file-ini",
+    "cfg": "file-ini",
+    "conf": "file-ini",
+    "csv": "file-csv",
+    "tsv": "file-csv",
+    "parquet": "file-parquet",
+    "feather": "file-parquet",
+    "sql": "file-sql",
+    "db": "file-db",
+    "sqlite": "file-db",
+    "duckdb": "file-db",
+    "c": "file-c",
+    "cpp": "file-cpp",
+    "cc": "file-cpp",
+    "cxx": "file-cpp",
+    "hpp": "file-h",
+    "h": "file-h",
+    "hh": "file-h",
+    "cmake": "file-cmake",
+    "mk": "file-make",
+    "rs": "file-rs",
+    "go": "file-go",
+    "java": "file-java",
+    "lua": "file-lua",
+    "sh": "file-sh",
+    "bash": "file-sh",
+    "zsh": "file-sh",
+    "fish": "file-sh",
+    "r": "file-r",
+    "html": "file-html",
+    "htm": "file-html",
+    "css": "file-css",
+    "scss": "file-scss",
+    "sass": "file-scss",
+    "less": "file-css",
+    "svg": "file-svg",
+    "xml": "file-xml",
+    "png": "file-image",
+    "jpg": "file-image",
+    "jpeg": "file-image",
+    "gif": "file-image",
+    "webp": "file-image",
+    "ico": "file-image",
+    "avif": "file-image",
+    "bmp": "file-image",
+    "pdf": "file-pdf",
+    "ttf": "file-font",
+    "otf": "file-font",
+    "woff": "file-font",
+    "woff2": "file-font",
+    "zip": "file-archive",
+    "gz": "file-archive",
+    "tar": "file-archive",
+    "xz": "file-archive",
+    "7z": "file-archive",
+    "zst": "file-archive",
+    "tex": "file-tex",
+    "vsix": "file-vsix"
+  },
+  "fileNames": {
+    "package.json": "file-npm",
+    "package-lock.json": "file-lock",
+    "yarn.lock": "file-lock",
+    "pnpm-lock.yaml": "file-lock",
+    "bun.lockb": "file-lock",
+    "uv.lock": "file-lock",
+    "poetry.lock": "file-lock",
+    "cargo.lock": "file-lock",
+    "tsconfig.json": "file-tsconfig",
+    "jsconfig.json": "file-tsconfig",
+    "pyproject.toml": "file-pyproject",
+    "requirements.txt": "file-pyproject",
+    "setup.py": "file-pyproject",
+    "readme.md": "file-readme",
+    "readme": "file-readme",
+    "license": "file-license",
+    "license.md": "file-license",
+    "license.txt": "file-license",
+    "cmakelists.txt": "file-cmake",
+    "makefile": "file-make",
+    ".gitignore": "file-git",
+    ".gitattributes": "file-git",
+    ".gitmodules": "file-git",
+    "dockerfile": "file-docker",
+    "docker-compose.yml": "file-docker",
+    "compose.yaml": "file-docker",
+    ".env": "file-env",
+    ".env.local": "file-env",
+    ".env.example": "file-env",
+    ".editorconfig": "file-ini"
+  },
+  "languageIds": {
+    "python": "file-py",
+    "typescript": "file-ts",
+    "typescriptreact": "file-tsx",
+    "javascript": "file-js",
+    "javascriptreact": "file-jsx",
+    "json": "file-json",
+    "jsonc": "file-json",
+    "markdown": "file-md",
+    "toml": "file-toml",
+    "yaml": "file-yaml",
+    "c": "file-c",
+    "cpp": "file-cpp",
+    "lua": "file-lua",
+    "shellscript": "file-sh",
+    "html": "file-html",
+    "css": "file-css",
+    "scss": "file-scss",
+    "rust": "file-rs",
+    "go": "file-go",
+    "java": "file-java",
+    "sql": "file-sql",
+    "dockerfile": "file-docker",
+    "makefile": "file-make",
+    "r": "file-r",
+    "xml": "file-xml",
+    "jupyter": "file-ipynb",
+    "latex": "file-tex",
+    "plaintext": "file-txt",
+    "ignore": "file-git",
+    "properties": "file-ini",
+    "dotenv": "file-env",
+    "log": "file-log"
+  },
+  "folderNames": {
+    "src": "folder-src",
+    "source": "folder-src",
+    "app": "folder-src",
+    "lib": "folder-src",
+    "pkg": "folder-src",
+    "core": "folder-src",
+    "components": "folder-src",
+    "test": "folder-tests",
+    "tests": "folder-tests",
+    "__tests__": "folder-tests",
+    "spec": "folder-tests",
+    "specs": "folder-tests",
+    "e2e": "folder-tests",
+    "data": "folder-data",
+    "datasets": "folder-data",
+    "raw": "folder-data",
+    "processed": "folder-data",
+    "db": "folder-data",
+    "database": "folder-data",
+    "fixtures": "folder-data",
+    "notebooks": "folder-notebooks",
+    "notebook": "folder-notebooks",
+    "nb": "folder-notebooks",
+    "analysis": "folder-notebooks",
+    "experiments": "folder-notebooks",
+    "docs": "folder-docs",
+    "doc": "folder-docs",
+    "documentation": "folder-docs",
+    "notes": "folder-docs",
+    "wiki": "folder-docs",
+    "scripts": "folder-scripts",
+    "script": "folder-scripts",
+    "bin": "folder-scripts",
+    "tools": "folder-scripts",
+    "cli": "folder-scripts",
+    "assets": "folder-assets",
+    "images": "folder-assets",
+    "img": "folder-assets",
+    "public": "folder-assets",
+    "static": "folder-assets",
+    "media": "folder-assets",
+    "icons": "folder-assets",
+    "fonts": "folder-assets",
+    ".git": "folder-git",
+    ".github": "folder-git",
+    ".gitlab": "folder-git",
+    ".husky": "folder-git",
+    ".vscode": "folder-config",
+    ".config": "folder-config",
+    "config": "folder-config",
+    "configs": "folder-config",
+    "settings": "folder-config",
+    ".idea": "folder-config",
+    "node_modules": "folder-deps",
+    ".venv": "folder-deps",
+    "venv": "folder-deps",
+    "env": "folder-deps",
+    "__pycache__": "folder-deps",
+    "build": "folder-deps",
+    "dist": "folder-deps",
+    "out": "folder-deps",
+    "target": "folder-deps",
+    ".cache": "folder-deps",
+    ".next": "folder-deps",
+    "vendor": "folder-deps",
+    ".pytest_cache": "folder-deps",
+    ".mypy_cache": "folder-deps",
+    ".ruff_cache": "folder-deps"
+  },
+  "folderNamesExpanded": {
+    "src": "folder-src-open",
+    "source": "folder-src-open",
+    "app": "folder-src-open",
+    "lib": "folder-src-open",
+    "pkg": "folder-src-open",
+    "core": "folder-src-open",
+    "components": "folder-src-open",
+    "test": "folder-tests-open",
+    "tests": "folder-tests-open",
+    "__tests__": "folder-tests-open",
+    "spec": "folder-tests-open",
+    "specs": "folder-tests-open",
+    "e2e": "folder-tests-open",
+    "data": "folder-data-open",
+    "datasets": "folder-data-open",
+    "raw": "folder-data-open",
+    "processed": "folder-data-open",
+    "db": "folder-data-open",
+    "database": "folder-data-open",
+    "fixtures": "folder-data-open",
+    "notebooks": "folder-notebooks-open",
+    "notebook": "folder-notebooks-open",
+    "nb": "folder-notebooks-open",
+    "analysis": "folder-notebooks-open",
+    "experiments": "folder-notebooks-open",
+    "docs": "folder-docs-open",
+    "doc": "folder-docs-open",
+    "documentation": "folder-docs-open",
+    "notes": "folder-docs-open",
+    "wiki": "folder-docs-open",
+    "scripts": "folder-scripts-open",
+    "script": "folder-scripts-open",
+    "bin": "folder-scripts-open",
+    "tools": "folder-scripts-open",
+    "cli": "folder-scripts-open",
+    "assets": "folder-assets-open",
+    "images": "folder-assets-open",
+    "img": "folder-assets-open",
+    "public": "folder-assets-open",
+    "static": "folder-assets-open",
+    "media": "folder-assets-open",
+    "icons": "folder-assets-open",
+    "fonts": "folder-assets-open",
+    ".git": "folder-git-open",
+    ".github": "folder-git-open",
+    ".gitlab": "folder-git-open",
+    ".husky": "folder-git-open",
+    ".vscode": "folder-config-open",
+    ".config": "folder-config-open",
+    "config": "folder-config-open",
+    "configs": "folder-config-open",
+    "settings": "folder-config-open",
+    ".idea": "folder-config-open",
+    "node_modules": "folder-deps-open",
+    ".venv": "folder-deps-open",
+    "venv": "folder-deps-open",
+    "env": "folder-deps-open",
+    "__pycache__": "folder-deps-open",
+    "build": "folder-deps-open",
+    "dist": "folder-deps-open",
+    "out": "folder-deps-open",
+    "target": "folder-deps-open",
+    ".cache": "folder-deps-open",
+    ".next": "folder-deps-open",
+    "vendor": "folder-deps-open",
+    ".pytest_cache": "folder-deps-open",
+    ".mypy_cache": "folder-deps-open",
+    ".ruff_cache": "folder-deps-open"
+  },
+  "hidesExplorerArrows": false
+}

@@ -1,0 +1,92 @@
+{
+  "fonts": [
+    {
+      "id": "eh-hull",
+      "src": [
+        {
+          "path": "../fonts/eh-hull.woff",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "iconDefinitions": {
+    "files": {
+      "fontCharacter": "\\e00d"
+    },
+    "search": {
+      "fontCharacter": "\\e015"
+    },
+    "source-control": {
+      "fontCharacter": "\\e010"
+    },
+    "debug-alt": {
+      "fontCharacter": "\\e00a"
+    },
+    "extensions": {
+      "fontCharacter": "\\e00c"
+    },
+    "account": {
+      "fontCharacter": "\\e001"
+    },
+    "settings-gear": {
+      "fontCharacter": "\\e00f"
+    },
+    "gear": {
+      "fontCharacter": "\\e00f"
+    },
+    "ellipsis": {
+      "fontCharacter": "\\e011"
+    },
+    "new-file": {
+      "fontCharacter": "\\e012"
+    },
+    "new-folder": {
+      "fontCharacter": "\\e013"
+    },
+    "refresh": {
+      "fontCharacter": "\\e014"
+    },
+    "collapse-all": {
+      "fontCharacter": "\\e009"
+    },
+    "git-branch": {
+      "fontCharacter": "\\e004"
+    },
+    "error": {
+      "fontCharacter": "\\e00b"
+    },
+    "warning": {
+      "fontCharacter": "\\e018"
+    },
+    "bell": {
+      "fontCharacter": "\\e003"
+    },
+    "sync": {
+      "fontCharacter": "\\e017"
+    },
+    "chevron-right": {
+      "fontCharacter": "\\e007"
+    },
+    "chevron-down": {
+      "fontCharacter": "\\e006"
+    },
+    "close": {
+      "fontCharacter": "\\e008"
+    },
+    "add": {
+      "fontCharacter": "\\e002"
+    },
+    "check": {
+      "fontCharacter": "\\e005"
+    },
+    "split-horizontal": {
+      "fontCharacter": "\\e016"
+    },
+    "filter": {
+      "fontCharacter": "\\e00e"
+    }
+  }
+}

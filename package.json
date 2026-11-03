@@ -1,0 +1,423 @@
+{
+  "name": "event-horizon-deep-space",
+  "displayName": "Event Horizon Deep Space Theme",
+  "description": "A true-black theme with an accretion-orange accent and amber-phosphor syntax, plus Nerd Font file icons, chamfered Hull product icons, comment-tag pills, inline problems, git blame and folded-line counts.",
+  "version": "1.0.0",
+  "publisher": "parzivall",
+  "author": {
+    "name": "Parzevall"
+  },
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Parzevall/event-horizon-deep-space"
+  },
+  "bugs": {
+    "url": "https://github.com/Parzevall/event-horizon-deep-space/issues"
+  },
+  "homepage": "https://github.com/Parzevall/event-horizon-deep-space#readme",
+  "keywords": [
+    "theme",
+    "dark theme",
+    "black",
+    "oled",
+    "orange",
+    "amber",
+    "phosphor",
+    "icon theme",
+    "product icons",
+    "nerd font",
+    "space"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Git blame is turned off in Restricted Mode, because a repository's git config can run commands. The theme, icons and other features work everywhere."
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Event Horizon Deep Space",
+        "uiTheme": "vs-dark",
+        "path": "./themes/event-horizon-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "event-horizon-nerd",
+        "label": "Event Horizon Nerd",
+        "path": "./icons/event-horizon-nerd-icon-theme.json"
+      },
+      {
+        "id": "event-horizon-tiles",
+        "label": "Event Horizon Tiles",
+        "path": "./icons/event-horizon-tiles-icon-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "eventHorizon.applySetup",
+        "title": "Apply Setup",
+        "category": "Event Horizon"
+      },
+      {
+        "command": "eventHorizon.revertSetup",
+        "title": "Revert Setup",
+        "category": "Event Horizon"
+      },
+      {
+        "command": "eventHorizon.copyCustomCssPath",
+        "title": "Copy Custom CSS Setting",
+        "category": "Event Horizon"
+      }
+    ],
+    "configuration": {
+      "title": "Event Horizon",
+      "properties": {
+        "eventHorizon.commentTags.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show TODO, FIXME, NOTE and HACK (plus BUG, XXX) as colored pills inside comments."
+        },
+        "eventHorizon.inlineProblems.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the problem message at the end of the line it belongs to, with a soft tint on the line."
+        },
+        "eventHorizon.inlineProblems.minSeverity": {
+          "type": "string",
+          "enum": [
+            "error",
+            "warning",
+            "info",
+            "hint"
+          ],
+          "default": "warning",
+          "description": "Least severe problem to show inline."
+        },
+        "eventHorizon.indentColumns.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Tint each indentation level with a faint column of color instead of hairline guides. Off by default; turn off editor.guides.indentation when using it."
+        },
+        "eventHorizon.foldedLines.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show how many lines a folded block hides, as a small pill after it."
+        },
+        "eventHorizon.blame.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show who last changed the current line, when, and the commit message, in faint text at the end of the line."
+        },
+        "eventHorizon.trailingWhitespace.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Tint spaces and tabs at the end of lines, except on the line you're typing in."
+        }
+      }
+    },
+    "colors": [
+      {
+        "id": "eventHorizon.tagForeground",
+        "description": "Text color of comment-tag pills.",
+        "defaults": {
+          "dark": "#000000",
+          "light": "#FFFFFF",
+          "highContrast": "#000000",
+          "highContrastLight": "#FFFFFF"
+        }
+      },
+      {
+        "id": "eventHorizon.tagTodo",
+        "description": "TODO pill background.",
+        "defaults": {
+          "dark": "#9BD67B",
+          "light": "#0E7C66",
+          "highContrast": "#9BD67B",
+          "highContrastLight": "#0E7C66"
+        }
+      },
+      {
+        "id": "eventHorizon.tagFixme",
+        "description": "FIXME and BUG pill background.",
+        "defaults": {
+          "dark": "#FF5F56",
+          "light": "#C0362F",
+          "highContrast": "#FF5F56",
+          "highContrastLight": "#C0362F"
+        }
+      },
+      {
+        "id": "eventHorizon.tagNote",
+        "description": "NOTE pill background.",
+        "defaults": {
+          "dark": "#9DB4FF",
+          "light": "#3554B8",
+          "highContrast": "#9DB4FF",
+          "highContrastLight": "#3554B8"
+        }
+      },
+      {
+        "id": "eventHorizon.tagHack",
+        "description": "HACK and XXX pill background.",
+        "defaults": {
+          "dark": "#FFC799",
+          "light": "#A35A00",
+          "highContrast": "#FFC799",
+          "highContrastLight": "#A35A00"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineErrorForeground",
+        "description": "Inline error message text.",
+        "defaults": {
+          "dark": "#FF5F56",
+          "light": "#C0362F",
+          "highContrast": "#FF5F56",
+          "highContrastLight": "#C0362F"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineErrorBackground",
+        "description": "Background tint of a line with an error.",
+        "defaults": {
+          "dark": "#FF5F561A",
+          "light": "#C0362F14",
+          "highContrast": "#FF5F561A",
+          "highContrastLight": "#C0362F14"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineWarningForeground",
+        "description": "Inline warning message text.",
+        "defaults": {
+          "dark": "#FFC799",
+          "light": "#A35A00",
+          "highContrast": "#FFC799",
+          "highContrastLight": "#A35A00"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineWarningBackground",
+        "description": "Background tint of a line with a warning.",
+        "defaults": {
+          "dark": "#FFC7990F",
+          "light": "#A35A0010",
+          "highContrast": "#FFC7990F",
+          "highContrastLight": "#A35A0010"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineInfoForeground",
+        "description": "Inline info message text.",
+        "defaults": {
+          "dark": "#9DB4FF",
+          "light": "#3554B8",
+          "highContrast": "#9DB4FF",
+          "highContrastLight": "#3554B8"
+        }
+      },
+      {
+        "id": "eventHorizon.inlineInfoBackground",
+        "description": "Background tint of a line with info.",
+        "defaults": {
+          "dark": "#00000000",
+          "light": "#00000000",
+          "highContrast": "#00000000",
+          "highContrastLight": "#00000000"
+        }
+      },
+      {
+        "id": "eventHorizon.indent1",
+        "description": "Indent column 1 tint.",
+        "defaults": {
+          "dark": "#9BD67B12",
+          "light": "#9BD67B1A",
+          "highContrast": "#9BD67B12",
+          "highContrastLight": "#9BD67B1A"
+        }
+      },
+      {
+        "id": "eventHorizon.indent2",
+        "description": "Indent column 2 tint.",
+        "defaults": {
+          "dark": "#FF7B5412",
+          "light": "#FF7B541A",
+          "highContrast": "#FF7B5412",
+          "highContrastLight": "#FF7B541A"
+        }
+      },
+      {
+        "id": "eventHorizon.indent3",
+        "description": "Indent column 3 tint.",
+        "defaults": {
+          "dark": "#E8A06A12",
+          "light": "#E8A06A1A",
+          "highContrast": "#E8A06A12",
+          "highContrastLight": "#E8A06A1A"
+        }
+      },
+      {
+        "id": "eventHorizon.indent4",
+        "description": "Indent column 4 tint.",
+        "defaults": {
+          "dark": "#7FD1C712",
+          "light": "#7FD1C71A",
+          "highContrast": "#7FD1C712",
+          "highContrastLight": "#7FD1C71A"
+        }
+      },
+      {
+        "id": "eventHorizon.indent5",
+        "description": "Indent column 5 tint.",
+        "defaults": {
+          "dark": "#D9C8A012",
+          "light": "#D9C8A01A",
+          "highContrast": "#D9C8A012",
+          "highContrastLight": "#D9C8A01A"
+        }
+      },
+      {
+        "id": "eventHorizon.indent6",
+        "description": "Indent column 6 tint.",
+        "defaults": {
+          "dark": "#FFB54712",
+          "light": "#FFB5471A",
+          "highContrast": "#FFB54712",
+          "highContrastLight": "#FFB5471A"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive1",
+        "description": "Indent column 1 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#9BD67B21",
+          "light": "#9BD67B2E",
+          "highContrast": "#9BD67B21",
+          "highContrastLight": "#9BD67B2E"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive2",
+        "description": "Indent column 2 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#FF7B5421",
+          "light": "#FF7B542E",
+          "highContrast": "#FF7B5421",
+          "highContrastLight": "#FF7B542E"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive3",
+        "description": "Indent column 3 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#E8A06A21",
+          "light": "#E8A06A2E",
+          "highContrast": "#E8A06A21",
+          "highContrastLight": "#E8A06A2E"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive4",
+        "description": "Indent column 4 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#7FD1C721",
+          "light": "#7FD1C72E",
+          "highContrast": "#7FD1C721",
+          "highContrastLight": "#7FD1C72E"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive5",
+        "description": "Indent column 5 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#D9C8A021",
+          "light": "#D9C8A02E",
+          "highContrast": "#D9C8A021",
+          "highContrastLight": "#D9C8A02E"
+        }
+      },
+      {
+        "id": "eventHorizon.indentActive6",
+        "description": "Indent column 6 tint inside the block with the cursor.",
+        "defaults": {
+          "dark": "#FFB54721",
+          "light": "#FFB5472E",
+          "highContrast": "#FFB54721",
+          "highContrastLight": "#FFB5472E"
+        }
+      },
+      {
+        "id": "eventHorizon.foldedForeground",
+        "description": "Text of the hidden-lines pill after a folded block.",
+        "defaults": {
+          "dark": "#FF8A3D",
+          "light": "#C2560F",
+          "highContrast": "#FF8A3D",
+          "highContrastLight": "#C2560F"
+        }
+      },
+      {
+        "id": "eventHorizon.foldedBackground",
+        "description": "Background of the hidden-lines pill.",
+        "defaults": {
+          "dark": "#FF8A3D29",
+          "light": "#C2560F1F",
+          "highContrast": "#FF8A3D29",
+          "highContrastLight": "#C2560F1F"
+        }
+      },
+      {
+        "id": "eventHorizon.blameForeground",
+        "description": "Git blame text at the end of the current line.",
+        "defaults": {
+          "dark": "#5E5A55",
+          "light": "#8A847D",
+          "highContrast": "#5E5A55",
+          "highContrastLight": "#8A847D"
+        }
+      },
+      {
+        "id": "eventHorizon.trailingWhitespaceBackground",
+        "description": "Trailing spaces and tabs.",
+        "defaults": {
+          "dark": "#FF5F5647",
+          "light": "#C0362F33",
+          "highContrast": "#FF5F5647",
+          "highContrastLight": "#C0362F33"
+        }
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "event-horizon-hull",
+        "label": "Event Horizon Hull",
+        "path": "./product-icons/event-horizon-hull-product-icon-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test test/",
+    "package": "npm run fonts && npm test && npx --yes @vscode/vsce@3 package --allow-missing-repository --skip-license",
+    "fonts": "node scripts/build.js && uv run --no-project --with fonttools --with picosvg --with skia-pathops python scripts/build-fonts.py"
+  }
+}

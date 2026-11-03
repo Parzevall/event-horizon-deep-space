@@ -1,0 +1,14 @@
+test/**
+docs/**
+scripts/**
+vendor/**
+src/palette.js
+src/color.js
+src/hull-icons.js
+product-icons/svg/**
+product-icons/icons.json
+fonts/nerd-codepoints.json
+images/screenshots/**
+.gitignore
+*.vsix
+node_modules/**

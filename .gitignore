@@ -1,0 +1,6 @@
+node_modules/
+*.vsix
+# private design notes (links to personal picker pages)
+docs/spec.md
+# private: patches VS Code itself, not for the public repo
+scripts/patch-vscode.sh

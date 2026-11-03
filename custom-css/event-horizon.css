@@ -1,0 +1,176 @@
+/* Event Horizon: optional extras that a color theme can't do.
+   Needs a custom CSS loader such as "Custom CSS and JS Loader" (be5invis.vscode-custom-css), which patches
+   VS Code's own files. VS Code then shows a "corrupt installation" warning; that's expected.
+   Selectors checked against VS Code 1.144. Colors come from the theme through VS Code's CSS variables. */
+
+/* Cursor glow: a soft accent halo around the block cursor */
+.monaco-editor .cursors-layer > .cursor {
+  box-shadow:
+    0 0 8px 1px color-mix(in srgb, var(--vscode-editorCursor-foreground) 65%, transparent),
+    0 0 22px 5px color-mix(in srgb, var(--vscode-editorCursor-foreground) 25%, transparent);
+}
+
+/* Empty editor: an accretion ring replaces the gray VS Code logo */
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark-wrapper .editor-group-watermark .letterpress {
+  background-image: none !important;
+  position: relative;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark-wrapper .editor-group-watermark .letterpress::after {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  border-radius: 50%;
+  background: #000;
+  box-shadow:
+    0 0 0 3px var(--vscode-editorCursor-foreground),
+    0 0 28px 8px color-mix(in srgb, var(--vscode-editorCursor-foreground) 50%, transparent),
+    inset 0 0 18px color-mix(in srgb, var(--vscode-editorCursor-foreground) 35%, transparent);
+}
+
+/* Unsaved tabs: the dot takes the accent */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty > .tab-actions .action-label:not(:hover)::before {
+  color: var(--vscode-tab-activeModifiedBorder);
+}
+
+/* Notifications: a thin colored edge for info, warning or error.
+   VS Code sets the toast's shadow and border inline, so the edge is its own stripe. */
+.monaco-workbench > .notifications-toasts .notification-toast:has(.notification-list-item-icon) {
+  position: relative;
+  overflow: hidden;
+}
+.monaco-workbench > .notifications-toasts .notification-toast:has(.notification-list-item-icon)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  z-index: 1;
+  pointer-events: none;
+  background: var(--vscode-notificationsInfoIcon-foreground);
+}
+.monaco-workbench > .notifications-toasts .notification-toast:has(.notification-list-item-icon.codicon-warning)::before {
+  background: var(--vscode-notificationsWarningIcon-foreground);
+}
+.monaco-workbench > .notifications-toasts .notification-toast:has(.notification-list-item-icon.codicon-error)::before {
+  background: var(--vscode-notificationsErrorIcon-foreground);
+}
+
+/* ---------------- Hull round 2 (Hull Studies picks, 2026-11-02) ---------------- */
+
+/* Hazard stripe on the active tab: the top line becomes a run of accent slashes */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active.tab-border-top > .tab-border-top-container {
+  height: 3px !important;
+  background: repeating-linear-gradient(-45deg, var(--vscode-tab-activeBorderTop) 0 3px, transparent 3px 7px) !important;
+}
+
+/* Hatched unsaved tabs: a faint hatched fill behind the tab */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.dirty {
+  background-image: repeating-linear-gradient(-45deg, color-mix(in srgb, var(--vscode-tab-activeModifiedBorder) 11%, transparent) 0 3px, transparent 3px 8px) !important;
+}
+
+/* Hatched seam between files and code. It sits on the sidebar's slot, not the sidebar itself,
+   so it stays at full strength while the sidebar fades. */
+.monaco-workbench .split-view-view:has(> .part.sidebar.left)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  z-index: 30;
+  pointer-events: none;
+  border-left: 1px solid var(--vscode-sideBar-border);
+  background: repeating-linear-gradient(-45deg, color-mix(in srgb, var(--vscode-editorCursor-foreground) 38%, transparent) 0 2px, transparent 2px 6px);
+}
+
+/* Slash breadcrumbs: the chevrons between path parts become accent slashes */
+.monaco-workbench .breadcrumbs-control .monaco-breadcrumb-item .codicon-breadcrumb-separator::before {
+  content: "/" !important;
+  font-family: var(--vscode-editor-font-family, monospace) !important;
+  font-size: 12px;
+  color: var(--vscode-editorCursor-foreground);
+}
+
+/* Hatched halo around the ring in the empty editor */
+.monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark-wrapper .editor-group-watermark .letterpress::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  pointer-events: none;
+  background: repeating-linear-gradient(-45deg, color-mix(in srgb, var(--vscode-editorCursor-foreground) 12%, transparent) 0 3px, transparent 3px 18px);
+  -webkit-mask: radial-gradient(circle, #000 0 28%, transparent 62%);
+  mask: radial-gradient(circle, #000 0 28%, transparent 62%);
+}
+
+/* Sidebar fades while you code: 45% until you hover it or move focus into it */
+.monaco-workbench .part.sidebar {
+  opacity: .45;
+  transition: opacity .25s ease;
+}
+.monaco-workbench .part.sidebar:hover,
+.monaco-workbench .part.sidebar:focus-within {
+  opacity: 1;
+}
+
+/* ---------------- Icons round 3 (Icon Studies picks, 2026-11-02) ---------------- */
+
+/* Hull product icons: the active activity bar item gets a hatched marker instead of a solid line */
+.monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator::before {
+  border-left: none !important;
+  width: 3px !important;
+  background: repeating-linear-gradient(-45deg, var(--vscode-activityBar-activeBorder) 0 2px, transparent 2px 4px);
+}
+
+/* ---------------- Title bar round 4 (Title Bar Studies picks, 2026-11-02) ---------------- */
+/* Needs "window.controlsStyle": "custom" so VS Code draws its own window buttons. */
+
+/* macOS traffic lights on the left: close, minimise, maximise */
+.monaco-workbench .part.titlebar .window-controls-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 78px !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 14px;
+}
+.monaco-workbench .part.titlebar .titlebar-container > .titlebar-left { padding-left: 78px; }
+.monaco-workbench .part.titlebar .window-controls-container > .window-icon {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  font-size: 9px !important;
+  color: transparent !important;
+  background: #3A3734;
+}
+.monaco-workbench .part.titlebar .window-controls-container > .window-icon::before { height: 9px; line-height: 9px; }
+.monaco-workbench .part.titlebar .window-controls-container > .window-icon.window-close { order: 0; background: #FF5F57 !important; }
+.monaco-workbench .part.titlebar .window-controls-container > .window-icon.window-minimize { order: 1; background: #FEBC2E; }
+.monaco-workbench .part.titlebar .window-controls-container > .window-icon.window-max-restore { order: 2; background: #28C840; }
+.monaco-workbench .part.titlebar .window-controls-container:hover > .window-icon { color: #0000009C !important; }
+/* like macOS, the lights go grey when the window isn't focused */
+.monaco-workbench .part.titlebar.inactive .window-controls-container:not(:hover) > .window-icon { background: #3A3734 !important; }
+
+/* Project chip in the middle: the command center box becomes chip + branch + file */
+.monaco-workbench .part.titlebar .command-center .action-item.command-center-center {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  width: auto !important;
+  max-width: 60vw;
+}
+.monaco-workbench .part.titlebar .command-center .command-center-center .search-icon { display: none; }
+.monaco-workbench .part.titlebar .command-center .search-label { display: inline-flex; align-items: center; gap: 10px; }
+.monaco-workbench .part.titlebar .eh-chip {
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--vscode-editorCursor-foreground) 16%, transparent);
+  color: var(--vscode-editorCursor-foreground);
+  font-weight: 600;
+}
+.monaco-workbench .part.titlebar .eh-branch { display: inline-flex; align-items: center; gap: 4px; color: var(--vscode-descriptionForeground); opacity: .75; }
+.monaco-workbench .part.titlebar .eh-branch .codicon { font-size: 13px; }
+.monaco-workbench .part.titlebar .eh-file { color: var(--vscode-titleBar-activeForeground); }
