@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 22
       - name: Test
-        run: node --test test/
+        run: node --test 'test/*.test.js'
       - name: Package
         run: npx --yes @vscode/vsce@4.1.0 package --out extension.vsix
       - name: Publish
